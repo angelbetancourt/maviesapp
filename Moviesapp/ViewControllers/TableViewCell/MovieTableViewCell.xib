@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="MovieTableViewCellIdentifier" rowHeight="133" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="Moviesapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="133"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="132.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WOJ-9B-j9Q">
+                        <rect key="frame" x="20" y="27" width="160" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="16g-7v-gY2"/>
+                            <constraint firstAttribute="width" constant="160" id="vdU-pd-XEf"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nkc-UE-vHV">
+                        <rect key="frame" x="192" y="23" width="189" height="87"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="150" translatesAutoresizingMaskIntoConstraints="NO" id="OcA-0G-xfE">
+                                <rect key="frame" x="0.0" y="0.0" width="189" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.031372549019607843" green="0.10980392156862745" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="150" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-Ae-vOs">
+                                <rect key="frame" x="0.0" y="25.5" width="189" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.031372549019607843" green="0.10980392156862745" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sap-q4-J18">
+                                <rect key="frame" x="0.0" y="47.5" width="189" height="39.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vote_icon" translatesAutoresizingMaskIntoConstraints="NO" id="v5s-mz-SY9">
+                                        <rect key="frame" x="0.0" y="7.5" width="25" height="25"/>
+                                        <color key="tintColor" red="0.0039215686274509803" green="0.82352941176470584" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Ehf-mA-gqF"/>
+                                            <constraint firstAttribute="height" constant="25" id="GZg-es-NDK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4v-Fp-DQJ">
+                                        <rect key="frame" x="25" y="11.5" width="164" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.031372549019607843" green="0.10980392156862745" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nkc-UE-vHV" firstAttribute="centerY" secondItem="WOJ-9B-j9Q" secondAttribute="centerY" id="2pt-Ve-30z"/>
+                    <constraint firstItem="WOJ-9B-j9Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3f2-Eb-bbj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nkc-UE-vHV" secondAttribute="trailing" constant="12" id="OcM-Co-4f6"/>
+                    <constraint firstItem="nkc-UE-vHV" firstAttribute="leading" secondItem="WOJ-9B-j9Q" secondAttribute="trailing" constant="12" id="ca8-lP-5jN"/>
+                    <constraint firstItem="nkc-UE-vHV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="hcS-c1-oYf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="nkc-UE-vHV" secondAttribute="bottom" constant="12" id="zfd-lG-aPu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieImageView" destination="WOJ-9B-j9Q" id="7TH-1a-ofd"/>
+                <outlet property="subtitleLabel" destination="R3f-Ae-vOs" id="Aod-Zl-M5x"/>
+                <outlet property="titleLabel" destination="OcA-0G-xfE" id="ks9-pm-rXO"/>
+                <outlet property="voteImageView" destination="v5s-mz-SY9" id="kW8-rh-qO0"/>
+                <outlet property="voteLabel" destination="F4v-Fp-DQJ" id="h5j-k0-Auw"/>
+            </connections>
+            <point key="canvasLocation" x="123.5" y="57.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="vote_icon" width="25" height="25"/>
+    </resources>
+</document>

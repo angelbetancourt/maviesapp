@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1TO-i0-pZ3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top Rated-->
+        <scene sceneID="SBO-9w-LW8">
+            <objects>
+                <viewController storyboardIdentifier="TopRatedMoviesViewController" id="ATj-iA-sqV" customClass="TopRatedMoviesViewController" customModule="Moviesapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Vb-di-jI6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="N66-dD-A3t">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laf-3h-E3c">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <connections>
+                                    <segue destination="yis-VO-4Bv" kind="embed" identifier="MoviesCollectionViewController" id="OZe-aF-qFw"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="laf-3h-E3c" firstAttribute="leading" secondItem="tpX-J6-yIJ" secondAttribute="leading" id="HYc-SH-vDq"/>
+                            <constraint firstItem="N66-dD-A3t" firstAttribute="top" secondItem="tpX-J6-yIJ" secondAttribute="top" id="Iig-cP-XxK"/>
+                            <constraint firstItem="tpX-J6-yIJ" firstAttribute="bottom" secondItem="laf-3h-E3c" secondAttribute="bottom" id="LUB-2U-lc7"/>
+                            <constraint firstItem="N66-dD-A3t" firstAttribute="leading" secondItem="tpX-J6-yIJ" secondAttribute="leading" id="OkT-mU-8UX"/>
+                            <constraint firstItem="N66-dD-A3t" firstAttribute="trailing" secondItem="tpX-J6-yIJ" secondAttribute="trailing" id="U2H-ti-RHu"/>
+                            <constraint firstItem="laf-3h-E3c" firstAttribute="top" secondItem="N66-dD-A3t" secondAttribute="bottom" id="mxX-CV-F3m"/>
+                            <constraint firstItem="tpX-J6-yIJ" firstAttribute="trailing" secondItem="laf-3h-E3c" secondAttribute="trailing" id="und-8d-NUy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tpX-J6-yIJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Top Rated" id="2ad-I9-8UP"/>
+                    <connections>
+                        <outlet property="searchBar" destination="N66-dD-A3t" id="ws9-GO-9DB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6d-1o-s7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="-192"/>
+        </scene>
+        <!--Populars-->
+        <scene sceneID="gAl-9b-wUw">
+            <objects>
+                <viewController storyboardIdentifier="PopularMoviesViewController" title="Populars" id="Ovw-yu-GdV" customClass="PopularMoviesViewController" customModule="Moviesapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOV-yq-DF6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="7hM-4r-re7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85m-Xk-ezf">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <connections>
+                                    <segue destination="yis-VO-4Bv" kind="embed" identifier="MoviesCollectionViewController" id="TqV-zu-TI2"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7hM-4r-re7" firstAttribute="leading" secondItem="4FV-oi-tUX" secondAttribute="leading" id="FvL-0h-ovf"/>
+                            <constraint firstItem="85m-Xk-ezf" firstAttribute="leading" secondItem="4FV-oi-tUX" secondAttribute="leading" id="Qrm-TX-X6n"/>
+                            <constraint firstItem="7hM-4r-re7" firstAttribute="top" secondItem="4FV-oi-tUX" secondAttribute="top" id="Snw-9O-Wvi"/>
+                            <constraint firstItem="85m-Xk-ezf" firstAttribute="trailing" secondItem="4FV-oi-tUX" secondAttribute="trailing" id="hH9-24-lEo"/>
+                            <constraint firstItem="7hM-4r-re7" firstAttribute="trailing" secondItem="4FV-oi-tUX" secondAttribute="trailing" id="lCR-HV-R57"/>
+                            <constraint firstItem="85m-Xk-ezf" firstAttribute="bottom" secondItem="4FV-oi-tUX" secondAttribute="bottom" id="sCG-WJ-VHk"/>
+                            <constraint firstItem="85m-Xk-ezf" firstAttribute="top" secondItem="7hM-4r-re7" secondAttribute="bottom" id="yrr-E2-fAe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4FV-oi-tUX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Popular" leftItemsSupplementBackButton="YES" id="m8Y-y7-anl"/>
+                    <connections>
+                        <outlet property="searchBar" destination="7hM-4r-re7" id="ydH-fU-STd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6u-he-gz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="-857"/>
+        </scene>
+        <!--Movies Collection View Controller-->
+        <scene sceneID="L3H-ZL-r8c">
+            <objects>
+                <collectionViewController storyboardIdentifier="MoviesCollectionViewController" id="yis-VO-4Bv" customClass="MoviesCollectionViewController" customModule="Moviesapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" id="EYu-PP-XRR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="4" id="Fp4-Yx-N3s">
+                            <size key="itemSize" width="120" height="260"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="8" maxX="16" maxY="8"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="yis-VO-4Bv" id="PWF-SE-EZq"/>
+                            <outlet property="delegate" destination="yis-VO-4Bv" id="7n2-Or-E3Y"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsU-Qy-b1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1937" y="357"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DKx-If-kP6">
+            <objects>
+                <tabBarController id="1TO-i0-pZ3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U0J-Vu-Qh8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GU1-of-dtr" kind="relationship" relationship="viewControllers" id="Kla-eP-1aH"/>
+                        <segue destination="YCM-3V-nZL" kind="relationship" relationship="viewControllers" id="LjO-9J-yeY"/>
+                        <segue destination="ToZ-tS-QaG" kind="relationship" relationship="viewControllers" id="IxS-ip-9tE"/>
+                        <segue destination="ekL-KC-dFH" kind="relationship" relationship="viewControllers" id="f1L-Ex-qiF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSm-ub-fS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1245" y="-123"/>
+        </scene>
+        <!--Upcoming-->
+        <scene sceneID="khd-f3-8h9">
+            <objects>
+                <viewController storyboardIdentifier="UpcomingMoviesViewController" id="wkW-Mt-Nn3" customClass="UpcomingMoviesViewController" customModule="Moviesapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ngr-88-IbB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="YQG-e8-pk3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpN-dG-BgL">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <connections>
+                                    <segue destination="yis-VO-4Bv" kind="embed" identifier="MoviesCollectionViewController" id="2M4-QF-sll"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EpN-dG-BgL" firstAttribute="leading" secondItem="MAn-YE-UG1" secondAttribute="leading" id="EzS-TY-Oni"/>
+                            <constraint firstItem="EpN-dG-BgL" firstAttribute="trailing" secondItem="MAn-YE-UG1" secondAttribute="trailing" id="Iao-n4-aHq"/>
+                            <constraint firstItem="YQG-e8-pk3" firstAttribute="top" secondItem="MAn-YE-UG1" secondAttribute="top" id="X4m-ah-Wrw"/>
+                            <constraint firstItem="EpN-dG-BgL" firstAttribute="bottom" secondItem="MAn-YE-UG1" secondAttribute="bottom" id="c4r-bC-Ybj"/>
+                            <constraint firstItem="YQG-e8-pk3" firstAttribute="leading" secondItem="MAn-YE-UG1" secondAttribute="leading" id="jcL-hX-9SM"/>
+                            <constraint firstItem="YQG-e8-pk3" firstAttribute="trailing" secondItem="MAn-YE-UG1" secondAttribute="trailing" id="lv7-ho-Bu6"/>
+                            <constraint firstItem="EpN-dG-BgL" firstAttribute="top" secondItem="YQG-e8-pk3" secondAttribute="bottom" id="z4V-bk-yGr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MAn-YE-UG1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upcoming" id="iBE-gl-OUX"/>
+                    <connections>
+                        <outlet property="searchBar" destination="YQG-e8-pk3" id="TN9-9C-LFO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMS-cw-LJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="551"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="EDB-Na-Mhx">
+            <objects>
+                <viewController storyboardIdentifier="SearchMoviesViewController" id="875-Zk-qdG" customClass="SearchMoviesViewController" customModule="Moviesapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2t-Fq-2Jf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="HJN-Te-qrx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D55-tQ-cQv">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <connections>
+                                    <segue destination="yis-VO-4Bv" kind="embed" identifier="MoviesCollectionViewController" id="l7n-QB-uxG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HJN-Te-qrx" firstAttribute="top" secondItem="1uX-nu-uJt" secondAttribute="top" id="4kU-xH-r2H"/>
+                            <constraint firstItem="HJN-Te-qrx" firstAttribute="leading" secondItem="1uX-nu-uJt" secondAttribute="leading" id="Ha1-zX-hob"/>
+                            <constraint firstItem="D55-tQ-cQv" firstAttribute="trailing" secondItem="1uX-nu-uJt" secondAttribute="trailing" id="hiN-Fz-hfo"/>
+                            <constraint firstItem="D55-tQ-cQv" firstAttribute="bottom" secondItem="1uX-nu-uJt" secondAttribute="bottom" id="p6l-O9-OkL"/>
+                            <constraint firstItem="D55-tQ-cQv" firstAttribute="leading" secondItem="1uX-nu-uJt" secondAttribute="leading" id="qrJ-nM-G4b"/>
+                            <constraint firstItem="D55-tQ-cQv" firstAttribute="top" secondItem="HJN-Te-qrx" secondAttribute="bottom" id="tao-bl-Vf2"/>
+                            <constraint firstItem="HJN-Te-qrx" firstAttribute="trailing" secondItem="1uX-nu-uJt" secondAttribute="trailing" id="zmB-h2-Iaz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1uX-nu-uJt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="Dfg-Jq-zRO"/>
+                    <connections>
+                        <outlet property="searchBar" destination="HJN-Te-qrx" id="hoR-Xz-Qab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2S-rA-rn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="1242"/>
+        </scene>
+        <!--Popular-->
+        <scene sceneID="8GI-Uc-Dix">
+            <objects>
+                <navigationController title="Popular" automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="GU1-of-dtr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Popular" id="pfG-vZ-5bo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="ptv-cw-ld2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0039215686269999999" green="0.82352941180000006" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ovw-yu-GdV" kind="relationship" relationship="rootViewController" id="PRX-bV-glG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ol8-rf-Ny6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292.80000000000001" y="-856.37181409295363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nD6-pq-MDQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="YCM-3V-nZL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="Ll5-2u-rWu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="wkG-lZ-aPV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0039215686269999999" green="0.82352941180000006" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ATj-iA-sqV" kind="relationship" relationship="rootViewController" id="ltA-Hd-6qQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrr-s9-OBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292.80000000000001" y="-191.6041979010495"/>
+        </scene>
+        <!--Upcoming-->
+        <scene sceneID="REU-2m-fSJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="ToZ-tS-QaG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Upcoming" id="FH0-64-haw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="qzZ-yc-CKV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0039215686269999999" green="0.82352941180000006" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wkW-Mt-Nn3" kind="relationship" relationship="rootViewController" id="BKy-WB-scg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6DR-B1-ep2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="551.42428785607206"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uwv-iP-ocH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="ekL-KC-dFH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="c8P-Hx-k55"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="ECZ-KA-kU8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0039215686269999999" green="0.82352941180000006" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="875-Zk-qdG" kind="relationship" relationship="rootViewController" id="Q2o-XL-A64"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Sw-NQ-aXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292.80000000000001" y="1242.2788605697153"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2M4-QF-sll"/>
+    </inferredMetricsTieBreakers>
+</document>
