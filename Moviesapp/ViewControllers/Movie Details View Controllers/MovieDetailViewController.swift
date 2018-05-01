@@ -22,6 +22,8 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var movieDetailStackView: UIStackView!
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var productionCompaniesLabel: UILabel!
+    @IBOutlet weak var productionCountriesLabel: UILabel!
     
     var movie: Movie?
     
@@ -73,6 +75,10 @@ class MovieDetailViewController: UIViewController {
         
         genresLabel.text = movie.genres.compactMap({ return $0.name }).joined(separator: ", ")
         
+        productionCompaniesLabel.text = movie.productionCompanies.compactMap({ return $0.name }).joined(separator: ", ")
+        
+        productionCountriesLabel.text = movie.productionCountries.compactMap({ return $0.name }).joined(separator: ", ")
+        
         fitContent()
         
     }
@@ -87,11 +93,11 @@ class MovieDetailViewController: UIViewController {
     func fitContent(){
         
         
-        let detailH = movieDetailStackView.frame.size.height + 240
+        let detailH = movieDetailStackView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
         
         let posterH = posterImageView.frame.size.height
         
-        let size = CGSize(width: view.frame.size.width, height: detailH + posterH + 12)
+        let size = CGSize(width: view.frame.size.width, height: detailH + posterH + 12 + 220)
         
         scrollView.contentSize = size
         
