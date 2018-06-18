@@ -24,5 +24,11 @@ struct SpokenLanguage: Mappable{
         iso639_1            <- map["iso_639_1"]
         name            <- map["name"]
     }
+}
+
+
+protocol SpokenLanguageProtocol {
     
+    var iso639_1: Int {get set}
+    var name: String? {get set}
 }
