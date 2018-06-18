@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1CC01F74AAAA617E620596F5 /* Pods_Moviesapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67C48CD17CD9E0F52B76966 /* Pods_Moviesapp.framework */; };
+		6781A5EC20D8701C00326C3A /* ShowMoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A5E620D8701C00326C3A /* ShowMoviePresenter.swift */; };
+		6781A5ED20D8701C00326C3A /* ShowMovieWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A5E720D8701C00326C3A /* ShowMovieWorker.swift */; };
+		6781A5EE20D8701C00326C3A /* ShowMovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A5E820D8701C00326C3A /* ShowMovieRouter.swift */; };
+		6781A5EF20D8701C00326C3A /* ShowMovieModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A5E920D8701C00326C3A /* ShowMovieModels.swift */; };
+		6781A5F020D8701C00326C3A /* ShowMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A5EA20D8701C00326C3A /* ShowMovieViewController.swift */; };
+		6781A5F120D8701C00326C3A /* ShowMovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A5EB20D8701C00326C3A /* ShowMovieInteractor.swift */; };
 		990DB3FA2093F30E009F6418 /* PopularMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DB3F92093F30E009F6418 /* PopularMoviesViewController.swift */; };
 		990DB3FC2093F322009F6418 /* TopRatedMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DB3FB2093F322009F6418 /* TopRatedMoviesViewController.swift */; };
 		990DB3FE2093F33E009F6418 /* UpcomingMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DB3FD2093F33E009F6418 /* UpcomingMoviesViewController.swift */; };
@@ -44,6 +50,12 @@
 /* Begin PBXFileReference section */
 		0470D85E05C6B48171AD62C1 /* Pods-Moviesapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moviesapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moviesapp/Pods-Moviesapp.debug.xcconfig"; sourceTree = "<group>"; };
 		34BA852BDE8FAA30652F81D4 /* Pods-Moviesapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moviesapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moviesapp/Pods-Moviesapp.release.xcconfig"; sourceTree = "<group>"; };
+		6781A5E620D8701C00326C3A /* ShowMoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoviePresenter.swift; sourceTree = "<group>"; };
+		6781A5E720D8701C00326C3A /* ShowMovieWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMovieWorker.swift; sourceTree = "<group>"; };
+		6781A5E820D8701C00326C3A /* ShowMovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMovieRouter.swift; sourceTree = "<group>"; };
+		6781A5E920D8701C00326C3A /* ShowMovieModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMovieModels.swift; sourceTree = "<group>"; };
+		6781A5EA20D8701C00326C3A /* ShowMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMovieViewController.swift; sourceTree = "<group>"; };
+		6781A5EB20D8701C00326C3A /* ShowMovieInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMovieInteractor.swift; sourceTree = "<group>"; };
 		990DB3F92093F30E009F6418 /* PopularMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewController.swift; sourceTree = "<group>"; };
 		990DB3FB2093F322009F6418 /* TopRatedMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewController.swift; sourceTree = "<group>"; };
 		990DB3FD2093F33E009F6418 /* UpcomingMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviesViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +110,49 @@
 				E67C48CD17CD9E0F52B76966 /* Pods_Moviesapp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6781A5E120D86CC800326C3A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6781A5E220D86CCE00326C3A /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		6781A5E320D86CDC00326C3A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6781A5E520D86E2C00326C3A /* Show Movie */,
+				6781A5E420D86E2000326C3A /* List Movies */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6781A5E420D86E2000326C3A /* List Movies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "List Movies";
+			sourceTree = "<group>";
+		};
+		6781A5E520D86E2C00326C3A /* Show Movie */ = {
+			isa = PBXGroup;
+			children = (
+				6781A5E620D8701C00326C3A /* ShowMoviePresenter.swift */,
+				6781A5E720D8701C00326C3A /* ShowMovieWorker.swift */,
+				6781A5E820D8701C00326C3A /* ShowMovieRouter.swift */,
+				6781A5E920D8701C00326C3A /* ShowMovieModels.swift */,
+				6781A5EA20D8701C00326C3A /* ShowMovieViewController.swift */,
+				6781A5EB20D8701C00326C3A /* ShowMovieInteractor.swift */,
+			);
+			path = "Show Movie";
 			sourceTree = "<group>";
 		};
 		990DB3F82093F2F5009F6418 /* ViewControllers */ = {
@@ -220,9 +275,12 @@
 		9968EACB2093D40B0006D662 /* Moviesapp */ = {
 			isa = PBXGroup;
 			children = (
+				6781A5E320D86CDC00326C3A /* Scenes */,
+				6781A5E220D86CCE00326C3A /* Workers */,
+				6781A5E120D86CC800326C3A /* Services */,
 				990DB40D2094DC7A009F6418 /* Extensions */,
 				990DB3F82093F2F5009F6418 /* ViewControllers */,
-				9968EAE22093E2A40006D662 /* Model */,
+				9968EAE22093E2A40006D662 /* Models */,
 				9968EACC2093D40B0006D662 /* AppDelegate.swift */,
 				9968EAD82093D40B0006D662 /* Info.plist */,
 				99616DD82097D2AD00DFA35D /* Storyboards */,
@@ -232,7 +290,7 @@
 			path = Moviesapp;
 			sourceTree = "<group>";
 		};
-		9968EAE22093E2A40006D662 /* Model */ = {
+		9968EAE22093E2A40006D662 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9968EAE32093E2B60006D662 /* Movie.swift */,
@@ -242,7 +300,7 @@
 				99616DE12097FF0200DFA35D /* ProductionCompany.swift */,
 				99616DE5209814D600DFA35D /* SpokenLanguage.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CD6C25E1079E8A5983BBC57D /* Pods */ = {
@@ -266,6 +324,7 @@
 				9968EAC62093D40B0006D662 /* Frameworks */,
 				9968EAC72093D40B0006D662 /* Resources */,
 				CC40386D53888AE8E2504118 /* [CP] Embed Pods Frameworks */,
+				A0DC73DD1744E301356FF4A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,6 +405,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A0DC73DD1744E301356FF4A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moviesapp/Pods-Moviesapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CC40386D53888AE8E2504118 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,14 +458,18 @@
 				992970B2209516E6005BFD7D /* MoviePosterPageViewController.swift in Sources */,
 				990DB3FA2093F30E009F6418 /* PopularMoviesViewController.swift in Sources */,
 				99616DDA2097D90700DFA35D /* Reachability.swift in Sources */,
+				6781A5EE20D8701C00326C3A /* ShowMovieRouter.swift in Sources */,
 				99616DE6209814D600DFA35D /* SpokenLanguage.swift in Sources */,
 				990DB40920942836009F6418 /* BaseMoviesViewController.swift in Sources */,
 				990DB402209405AB009F6418 /* MovieTableViewCell.swift in Sources */,
 				99616DE22097FF0200DFA35D /* ProductionCompany.swift in Sources */,
 				990DB3FC2093F322009F6418 /* TopRatedMoviesViewController.swift in Sources */,
+				6781A5EF20D8701C00326C3A /* ShowMovieModels.swift in Sources */,
 				992970B82095247D005BFD7D /* SearchMoviesViewController.swift in Sources */,
+				6781A5EC20D8701C00326C3A /* ShowMoviePresenter.swift in Sources */,
 				9968EAE12093E03A0006D662 /* Updater.swift in Sources */,
 				990DB40F2094DC8D009F6418 /* UIColor+Moviesapp.swift in Sources */,
+				6781A5F120D8701C00326C3A /* ShowMovieInteractor.swift in Sources */,
 				9968EACD2093D40B0006D662 /* AppDelegate.swift in Sources */,
 				992970BD20978A15005BFD7D /* MoviesCollectionViewController.swift in Sources */,
 				992970B420951ACC005BFD7D /* MoviePosterViewController.swift in Sources */,
@@ -401,6 +479,8 @@
 				992970C120978A5D005BFD7D /* MovieCollectionViewCell.swift in Sources */,
 				99616DD22097C4D900DFA35D /* UIView+Moviesapp.swift in Sources */,
 				9968EADF2093D97D0006D662 /* Constants.swift in Sources */,
+				6781A5ED20D8701C00326C3A /* ShowMovieWorker.swift in Sources */,
+				6781A5F020D8701C00326C3A /* ShowMovieViewController.swift in Sources */,
 				9968EAE42093E2B60006D662 /* Movie.swift in Sources */,
 				99616DDE2097FE2300DFA35D /* Video.swift in Sources */,
 				99616DDC2097FBDE00DFA35D /* Genre.swift in Sources */,
