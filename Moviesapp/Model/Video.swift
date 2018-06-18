@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Video: Mappable{
+struct Video: Mappable{
     
     var id: String = ""
     var iso639_1: String?
@@ -21,12 +21,12 @@ class Video: Mappable{
     var type: String?
     
     
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
     
     // Mappable
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         
         id            <- map["id"]
         iso639_1          <- map["iso_639_1"]

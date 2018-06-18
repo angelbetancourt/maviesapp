@@ -9,17 +9,17 @@
 import Foundation
 import ObjectMapper
 
-class SpokenLanguage: Mappable{
+struct SpokenLanguage: Mappable{
     
     var iso639_1: Int!
     var name: String?
     
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
     
     // Mappable
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         
         iso639_1            <- map["iso_639_1"]
         name            <- map["name"]

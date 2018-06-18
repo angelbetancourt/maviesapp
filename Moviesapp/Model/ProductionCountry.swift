@@ -9,17 +9,17 @@
 import Foundation
 import ObjectMapper
 
-class ProductionCountry: Mappable{
+struct ProductionCountry: Mappable{
     
     var iso3166_1: Int!
     var name: String?
     
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
     
     // Mappable
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         
         iso3166_1            <- map["iso_3166_1"]
         name            <- map["name"]

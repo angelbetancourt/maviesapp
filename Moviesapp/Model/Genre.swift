@@ -9,17 +9,17 @@
 import Foundation
 import ObjectMapper
 
-class Genre: Mappable{
+struct Genre: Mappable{
     
     var id: Int!
     var name: String = ""
     
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
     
     // Mappable
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         
         id            <- map["id"]
         name          <- map["name"]

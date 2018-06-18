@@ -9,21 +9,19 @@
 import Foundation
 import ObjectMapper
 
-class MoviesResponse: Mappable {
-    
-    var movies: [Movie]?
-    
-    required init?(map: Map){
+struct MoviesResponse: Mappable {
+    init?(map: Map) {
         
     }
     
-    func mapping(map: Map) {
-        movies <- map["results"]
+    mutating func mapping(map: Map) {
+        
     }
+    var movies: [Movie]?
 }
 
 
-class Movie: Mappable{
+struct Movie: Mappable{
     
     
     static var userDateFormatter: DateFormatter{
@@ -95,12 +93,12 @@ class Movie: Mappable{
         return URL(string: "\(apiImageBaseUrl)/t/p/w500\(backdropPath)")
     }
     
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
     
     // Mappable
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         
         id                 <- map["id"]
         voteCount          <- map["vote_count"]

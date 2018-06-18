@@ -9,19 +9,19 @@
 import Foundation
 import ObjectMapper
 
-class ProductionCompany: Mappable{
+struct ProductionCompany: Mappable{
     
     var id: Int!
     var logoPath: String?
     var name: String?
     var originCountry: String?
     
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
     
     // Mappable
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         
         id            <- map["id"]
         logoPath          <- map["logo_path"]
